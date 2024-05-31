@@ -1,0 +1,2 @@
+#Run1.SearchRun related test cases (total: 11)
+import Run1.SearchRun.tc_ID84624_ResetSearchRun, Run1.SearchRun.tc_ID84625_ResetAfterSearchingRun, Run1.SearchRun.tc_ID84631_SearchRunByDefaultTester, Run1.SearchRun.tc_ID84633_SearchRunByManager, Run1.SearchRun.tc_ID84635_SearchRunByPlan, Run1.SearchRun.tc_ID84636_SearchRunByProdWithVer, Run1.SearchRun.tc_ID84637_SearchRunByProdWithoutVer, Run1.SearchRun.tc_ID84640_SearchRunBySpecialSummary, Run1.SearchRun.tc_ID84642_SearchRunByStatus, Run1.SearchRun.tc_ID84643_SearchRunBySummary, Run1.SearchRun.tc_ID84649_SearchMyRuns

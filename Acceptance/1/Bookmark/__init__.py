@@ -1,0 +1,2 @@
+#Bookmark related test cases (total: 5)
+import Bookmark.tc_ID84214_DeleteBookmarksWithoutChoose, Bookmark.tc_ID84241_SingleClickBookmark, Bookmark.tc_ID84243_BookmarkThisPage, Bookmark.tc_ID84248_DeleteSeveralBookmarks, Bookmark.tc_ID84254_SubmitThisBookmark

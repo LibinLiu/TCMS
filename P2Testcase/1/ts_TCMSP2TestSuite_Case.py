@@ -1,0 +1,75 @@
+from selenium import selenium
+import unittest, time, re
+
+from env import *
+
+#(Total: 57)
+#Case related test cases (total: 57)
+import Case.tc_ID84381_ChooseAllCompForNewCase, Case.tc_ID84382_ClearAllCompForNewCase, Case.tc_ID84383_CreateNewCaseAddAnother, Case.tc_ID84384_CreateNewCaseAndBack, Case.tc_ID84385_CreateNewCaseReturnToPlan, Case.tc_ID84388_CreateNewCaseAndSave, Case.tc_ID84389_CreateNewCaseWithoutSum, Case.tc_ID84390_CreateNewCaseAndEdit, Case.tc_ID84391_SelCompBySearchForNewCase, Case.tc_ID84405_EditTagInCase, Case.tc_ID84406_ClickAutomatedForOneCaseInPlan, Case.tc_ID84409_ClickCaseIDInPlan, Case.tc_ID84416_RemoveCaseFromPlan, Case.tc_ID84422_ViewCaseHistory, Case.tc_ID84423_RemoveOneCase, Case.tc_ID84430_PrintOneCaseInPlan, Case.tc_ID84432_FilterCaseByCaseStatusInPlan, Case.tc_ID84433_FilterCaseByAutTagInPlan, Case.tc_ID84434_FilterCaseByComCatInPlan, Case.tc_ID84435_FilterCaseByPriTesterInPlan, Case.tc_ID84436_CloneNoneCaseInPlan, Case.tc_ID84438_CloneOneCaseInCase, Case.tc_ID84439_CloneSomeCasesInPlan, Case.tc_ID84440_FilterRevCaseByOpnInPlan, Case.tc_ID84602_CreateNewCaseByTestingMenu, Case.tc_ID84603_ResetAllSearchCaseSettings, Case.tc_ID84604_SearchCaseByAllItems, Case.tc_ID84605_SearchCaseByAuthor, Case.tc_ID84606_SearchCaseByAuto, Case.tc_ID84607_SearchCaseByBugID, Case.tc_ID84609_SearchCaseByComponent, Case.tc_ID84610_SearchCaseByPlan, Case.tc_ID84611_SearchCaseByPriority, Case.tc_ID84612_SearchCaseByProduct, Case.tc_ID84613_SearchCaseByProdCompCate, Case.tc_ID84614_SearchCaseBySomeItems, Case.tc_ID84615_SearchCaseByStatus, Case.tc_ID84616_SearchCaseBySummary, Case.tc_ID84617_SearchCaseByTag, Case.tc_ID86763_DoubleClickCompForNewCase, Case.tc_ID86764_RefreshCompCateForNewCase, Case.tc_ID87148_AddOneCaseFromOtherPlan, Case.tc_ID87151_PrintAllCasesInPlan, Case.tc_ID87152_CloneAllCasesInPlan, Case.tc_ID87154_CloneCasesIntoAnotherPlan, Case.tc_ID87155_CloneOneCaseAlterPropInCase, Case.tc_ID87156_CloneSomeCasesInPlan, Case.tc_ID87271_RemoveAllCases, Case.tc_ID87273_SearchRemovedOneCase, Case.tc_ID87346_AddCaseIntoMorePlanInCase, Case.tc_ID87347_ClickPlanIDInCase, Case.tc_ID87349_CancelAddComponentInCase, Case.tc_ID87355_ClickBugURL, Case.tc_ID87357_ClickAddWithoutTagName, Case.tc_ID87358_AddInvalidBugID, Case.tc_ID87360_AddInvalidPlanIDInCase, Case.tc_ID87367_ClickRunIDInCase
+
+def suite():
+
+	suite = unittest.TestSuite()
+
+	#Case related test cases (total: 57)
+	suite.addTest(Case.tc_ID84381_ChooseAllCompForNewCase.ChooseAllCompForNewCase("test_ChooseAllCompForNewCase"))
+	suite.addTest(Case.tc_ID84382_ClearAllCompForNewCase.ClearAllCompForNewCase("test_ClearAllCompForNewCase"))
+	suite.addTest(Case.tc_ID84383_CreateNewCaseAddAnother.CreateNewCaseAddAnother("test_CreateNewCaseAddAnother"))
+	suite.addTest(Case.tc_ID84384_CreateNewCaseAndBack.CreateNewCaseAndBack("test_CreateNewCaseAndBack"))
+	suite.addTest(Case.tc_ID84385_CreateNewCaseReturnToPlan.CreateNewCaseReturnToPlan("test_CreateNewCaseReturnToPlan"))
+	suite.addTest(Case.tc_ID84388_CreateNewCaseAndSave.CreateNewCaseAndSave("test_CreateNewCaseAndSave"))
+	suite.addTest(Case.tc_ID84389_CreateNewCaseWithoutSum.CreateNewCaseWithoutSum("test_CreateNewCaseWithoutSum"))
+	suite.addTest(Case.tc_ID84390_CreateNewCaseAndEdit.CreateNewCaseAndEdit("test_CreateNewCaseAndEdit"))
+	suite.addTest(Case.tc_ID84391_SelCompBySearchForNewCase.SelCompBySearchForNewCase("test_SelCompBySearchForNewCase"))
+	suite.addTest(Case.tc_ID84405_EditTagInCase.EditTagInCase("test_EditTagInCase"))
+	suite.addTest(Case.tc_ID84406_ClickAutomatedForOneCaseInPlan.ClickAutomatedForOneCaseInPlan("test_ClickAutomatedForOneCaseInPlan"))
+	suite.addTest(Case.tc_ID84409_ClickCaseIDInPlan.ClickCaseIDInPlan("test_ClickCaseIDInPlan"))
+	suite.addTest(Case.tc_ID84416_RemoveCaseFromPlan.RemoveCaseFromPlan("test_RemoveCaseFromPlan"))
+	suite.addTest(Case.tc_ID84422_ViewCaseHistory.ViewCaseHistory("test_ViewCaseHistory"))
+	suite.addTest(Case.tc_ID84423_RemoveOneCase.RemoveOneCase("test_RemoveOneCase"))
+	suite.addTest(Case.tc_ID84430_PrintOneCaseInPlan.PrintOneCaseInPlan("test_PrintOneCaseInPlan"))
+	suite.addTest(Case.tc_ID84432_FilterCaseByCaseStatusInPlan.FilterCaseByCaseStatusInPlan("test_FilterCaseByCaseStatusInPlan"))
+	suite.addTest(Case.tc_ID84433_FilterCaseByAutTagInPlan.FilterCaseByAutTagInPlan("test_FilterCaseByAutTagInPlan"))
+	suite.addTest(Case.tc_ID84434_FilterCaseByComCatInPlan.FilterCaseByComCatInPlan("test_FilterCaseByComCatInPlan"))
+	suite.addTest(Case.tc_ID84435_FilterCaseByPriTesterInPlan.FilterCaseByPriTesterInPlan("test_FilterCaseByPriTesterInPlan"))
+	suite.addTest(Case.tc_ID84436_CloneNoneCaseInPlan.CloneNoneCaseInPlan("test_CloneNoneCaseInPlan"))
+	suite.addTest(Case.tc_ID84438_CloneOneCaseInCase.CloneOneCaseInCase("test_CloneOneCaseInCase"))
+	suite.addTest(Case.tc_ID84439_CloneSomeCasesInPlan.CloneSomeCasesInPlan("test_CloneSomeCasesInPlan"))
+	suite.addTest(Case.tc_ID84440_FilterRevCaseByOpnInPlan.FilterRevCaseByOpnInPlan("test_FilterRevCaseByOpnInPlan"))
+	suite.addTest(Case.tc_ID84602_CreateNewCaseByTestingMenu.CreateNewCaseByTestingMenu("test_CreateNewCaseByTestingMenu"))
+	suite.addTest(Case.tc_ID84603_ResetAllSearchCaseSettings.ResetAllSearchCaseSettings("test_ResetAllSearchCaseSettings"))
+	suite.addTest(Case.tc_ID84604_SearchCaseByAllItems.SearchCaseByAllItems("test_SearchCaseByAllItems"))
+	suite.addTest(Case.tc_ID84605_SearchCaseByAuthor.SearchCaseByAuthor("test_SearchCaseByAuthor"))
+	suite.addTest(Case.tc_ID84606_SearchCaseByAuto.SearchCaseByAuto("test_SearchCaseByAuto"))
+	suite.addTest(Case.tc_ID84607_SearchCaseByBugID.SearchCaseByBugID("test_SearchCaseByBugID"))
+	suite.addTest(Case.tc_ID84609_SearchCaseByComponent.SearchCaseByComponent("test_SearchCaseByComponent"))
+	suite.addTest(Case.tc_ID84610_SearchCaseByPlan.SearchCaseByPlan("test_SearchCaseByPlan"))
+	suite.addTest(Case.tc_ID84611_SearchCaseByPriority.SearchCaseByPriority("test_SearchCaseByPriority"))
+	suite.addTest(Case.tc_ID84612_SearchCaseByProduct.SearchCaseByProduct("test_SearchCaseByProduct"))
+	suite.addTest(Case.tc_ID84613_SearchCaseByProdCompCate.SearchCaseByProdCompCate("test_SearchCaseByProdCompCate"))
+	suite.addTest(Case.tc_ID84614_SearchCaseBySomeItems.SearchCaseBySomeItems("test_SearchCaseBySomeItems"))
+	suite.addTest(Case.tc_ID84615_SearchCaseByStatus.SearchCaseByStatus("test_SearchCaseByStatus"))
+	suite.addTest(Case.tc_ID84616_SearchCaseBySummary.SearchCaseBySummary("test_SearchCaseBySummary"))
+	suite.addTest(Case.tc_ID84617_SearchCaseByTag.SearchCaseByTag("test_SearchCaseByTag"))
+	suite.addTest(Case.tc_ID86763_DoubleClickCompForNewCase.DoubleClickCompForNewCase("test_DoubleClickCompForNewCase"))
+	suite.addTest(Case.tc_ID86764_RefreshCompCateForNewCase.RefreshCompCateForNewCase("test_RefreshCompCateForNewCase"))
+	suite.addTest(Case.tc_ID87148_AddOneCaseFromOtherPlan.AddOneCaseFromOtherPlan("test_AddOneCaseFromOtherPlan"))
+	suite.addTest(Case.tc_ID87151_PrintAllCasesInPlan.PrintAllCasesInPlan("test_PrintAllCasesInPlan"))
+	suite.addTest(Case.tc_ID87152_CloneAllCasesInPlan.CloneAllCasesInPlan("test_CloneAllCasesInPlan"))
+	suite.addTest(Case.tc_ID87154_CloneCasesIntoAnotherPlan.CloneCasesIntoAnotherPlan("test_CloneCasesIntoAnotherPlan"))
+	suite.addTest(Case.tc_ID87155_CloneOneCaseAlterPropInCase.CloneOneCaseAlterPropInCase("test_CloneOneCaseAlterPropInCase"))
+	suite.addTest(Case.tc_ID87156_CloneSomeCasesInPlan.CloneSomeCasesInPlan("test_CloneSomeCasesInPlan"))
+	suite.addTest(Case.tc_ID87271_RemoveAllCases.RemoveAllCases("test_RemoveAllCases"))
+	suite.addTest(Case.tc_ID87273_SearchRemovedOneCase.SearchRemovedOneCase("test_SearchRemovedOneCase"))
+	suite.addTest(Case.tc_ID87346_AddCaseIntoMorePlanInCase.AddCaseIntoMorePlanInCase("test_AddCaseIntoMorePlanInCase"))
+	suite.addTest(Case.tc_ID87347_ClickPlanIDInCase.ClickPlanIDInCase("test_ClickPlanIDInCase"))
+	suite.addTest(Case.tc_ID87349_CancelAddComponentInCase.CancelAddComponentInCase("test_CancelAddComponentInCase"))
+	suite.addTest(Case.tc_ID87355_ClickBugURL.ClickBugURL("test_ClickBugURL"))
+	suite.addTest(Case.tc_ID87357_ClickAddWithoutTagName.ClickAddWithoutTagName("test_ClickAddWithoutTagName"))
+	suite.addTest(Case.tc_ID87358_AddInvalidBugID.AddInvalidBugID("test_AddInvalidBugID"))
+	suite.addTest(Case.tc_ID87360_AddInvalidPlanIDInCase.AddInvalidPlanIDInCase("test_AddInvalidPlanIDInCase"))
+	suite.addTest(Case.tc_ID87367_ClickRunIDInCase.ClickRunIDInCase("test_ClickRunIDInCase"))
+
+	return suite
+
+if __name__ == "__main__":   unittest.main(defaultTest = 'suite')
